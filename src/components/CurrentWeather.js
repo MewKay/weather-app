@@ -7,12 +7,13 @@ const CurrentWeather = function createCurrentWeatherObject(data) {
     location,
     current: { condition, ...current },
   } = data;
-
   const { name: cityName, country: countryName } = location;
+  const localDate = epochToDate(location.localtime_epoch);
 
   return {
     cityName,
     countryName,
+    localDate,
   };
 };
 
