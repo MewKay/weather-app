@@ -7,3 +7,4 @@ const weatherData = await getCurrentWeather("Antananarivo");
 const myWeather = CurrentWeather(weatherData);
 
 console.log(myWeather);
+console.log(weatherData);

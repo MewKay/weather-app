@@ -27,6 +27,8 @@ const CurrentWeather = function createCurrentWeatherObject(data) {
   const temperatureCelsius = current.feelslike_c;
   const temperatureFahrenheit = current.feelslike_f;
 
+  const info = condition.text;
+  const { icon } = condition;
   return {
     cityName,
     countryName,
@@ -34,6 +36,8 @@ const CurrentWeather = function createCurrentWeatherObject(data) {
     time,
     temperatureCelsius,
     temperatureFahrenheit,
+    info,
+    icon,
   };
 };
 
