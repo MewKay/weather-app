@@ -34,6 +34,8 @@ const CurrentWeather = function createCurrentWeatherObject(data) {
   const { humidity } = current;
   const { cloud } = current;
 
+  const daytime = current.is_day === 1;
+
   return {
     cityName,
     countryName,
@@ -45,6 +47,7 @@ const CurrentWeather = function createCurrentWeatherObject(data) {
     icon,
     humidity,
     cloud,
+    daytime,
   };
 };
 
