@@ -18,6 +18,7 @@ const CurrentWeather = function createCurrentWeatherObject(data) {
     location,
     current: { condition, ...current },
   } = data;
+
   const { name: cityName, country: countryName } = location;
 
   const localDate = epochToDate(location.localtime_epoch);
@@ -29,6 +30,10 @@ const CurrentWeather = function createCurrentWeatherObject(data) {
 
   const info = condition.text;
   const { icon } = condition;
+
+  const { humidity } = current;
+  const { cloud } = current;
+
   return {
     cityName,
     countryName,
@@ -38,6 +43,8 @@ const CurrentWeather = function createCurrentWeatherObject(data) {
     temperatureFahrenheit,
     info,
     icon,
+    humidity,
+    cloud,
   };
 };
 
