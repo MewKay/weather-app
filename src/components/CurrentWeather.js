@@ -24,11 +24,16 @@ const CurrentWeather = function createCurrentWeatherObject(data) {
   const date = getFormattedDate(localDate);
   const time = getFormattedTime(localDate);
 
+  const temperatureCelsius = current.feelslike_c;
+  const temperatureFahrenheit = current.feelslike_f;
+
   return {
     cityName,
     countryName,
     date,
     time,
+    temperatureCelsius,
+    temperatureFahrenheit,
   };
 };
 

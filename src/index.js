@@ -5,3 +5,5 @@ import "./styles/style.css";
 
 const weatherData = await getCurrentWeather("Antananarivo");
 const myWeather = CurrentWeather(weatherData);
+
+console.log(myWeather);
