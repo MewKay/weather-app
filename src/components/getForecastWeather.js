@@ -1,10 +1,10 @@
 const getForecastWeather = async function getForecastWeatherFromAPIWithCityName(
   cityName
 ) {
-  const response = await fetch(
-    `http://api.weatherapi.com/v1/forecast.json?key=2d66ee56e3944acca19215754231708&q=${cityName}&days=3`,
-    { mode: "cors" }
-  );
+  const API_KEY = "2d66ee56e3944acca19215754231708";
+  const NUMBER_OF_DAYS_TO_FORECAST = 3;
+  const API_REQUEST_URL = `http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${cityName}&days=${NUMBER_OF_DAYS_TO_FORECAST}`;
+  const response = await fetch(API_REQUEST_URL, { mode: "cors" });
 
   if (response.status !== 200) {
     throw new Error("Data Unavailable");
