@@ -4,10 +4,17 @@ import getForecastWeather from "./components/getForecastWeather";
 import "./styles/reset.css";
 import "./styles/style.css";
 
-const cityName = "Antananarivo";
-const weatherData = await getForecastWeather(cityName);
-const nowWeather = CurrentWeather(weatherData);
-const forecastWeather = ForecastDays(weatherData);
+const searchInput = document.querySelector("#city-search");
+const searchButton = document.querySelector(".btn-city-search");
 
-console.log(nowWeather);
-console.log(forecastWeather);
+const displayWeatherInfo = async () => {
+  if (searchInput.value === "") return;
+  const cityName = searchInput.value;
+  const weatherData = await getForecastWeather(cityName);
+  const currentWeather = CurrentWeather(weatherData);
+  const forecastDays = ForecastDays(weatherData);
+  console.log(currentWeather);
+  console.log(forecastDays);
+};
+
+searchButton.addEventListener("click", displayWeatherInfo);

@@ -10,7 +10,7 @@ const getFormattedDate = function formatDateToConvenientPattern(date) {
 };
 
 const getFormattedTime = function formatDateToGetTheTimeHourAndMinute(date) {
-  return format(date, "hh:mm aaa");
+  return format(date, "p");
 };
 
 const CurrentWeather = function createCurrentWeatherObject(data) {
