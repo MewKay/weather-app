@@ -1,9 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;700&family=Nunito:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
 :root {
   --text: #e2f6fd;
   --background: #021d27;
   --primary: #0daae2;
   --secondary: #043649;
   --accent: #bcf425;
+  --font-heading: "Bricolage Grotesque", Helvetica, sans-serif;
+  --font-text: "Nunito", sans-serif;
 }
 
 body {
