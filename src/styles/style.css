@@ -13,3 +13,81 @@
 body {
   background-color: var(--background);
 }
+
+/* -- Layout -- */
+
+/* --- Header --- */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 7rem;
+}
+
+.search-section {
+  display: flex;
+  padding: 0.5rem 1.3rem;
+}
+
+#city-search {
+  flex-grow: 2;
+}
+
+.btn-city-search {
+  display: flex;
+  align-items: center;
+}
+
+/* -- Style -- */
+
+/* --- Header --- */
+
+header {
+  background-color: var(--primary);
+}
+
+.brand-name {
+  font-size: 3rem;
+  font-family: var(--font-heading);
+  font-weight: bold;
+  letter-spacing: -2px;
+  color: var(--text);
+}
+
+.search-section {
+  background-color: var(--text);
+  border-radius: 50px;
+}
+
+.search-section:focus-within {
+  outline: 1px solid var(--secondary);
+}
+
+#city-search {
+  border: none;
+  background-color: var(--text);
+  color: var(--background);
+  font-size: 1.2rem;
+  font-family: var(--font-text);
+}
+
+#city-search {
+  outline: none;
+}
+
+.btn-city-search {
+  display: flex;
+  align-items: center;
+  border: none;
+  background-color: var(--text);
+}
+
+.btn-city-search:hover {
+  cursor: pointer;
+}
+
+.btn-city-search > .material-symbols-rounded {
+  font-size: 1.5rem;
+  color: var(--background);
+}
