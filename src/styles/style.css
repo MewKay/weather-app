@@ -1,3 +1,321 @@
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;700&family=Nunito:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+:root {
+  --text: #e2f6fd;
+  --background: #021d27;
+  --primary: #0daae2;
+  --secondary: #043649;
+  --accent: #bcf425;
+  --font-heading: "Bricolage Grotesque", Helvetica, sans-serif;
+  --font-text: "Nunito", sans-serif;
+}
+
 body {
-  background-color: black;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+/* -- Layout -- */
+
+/* --- Header --- */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 7rem;
+}
+
+.search-section {
+  display: flex;
+  padding: 0.5rem 1.3rem;
+}
+
+#city-search {
+  flex-grow: 2;
+}
+
+.btn-city-search {
+  display: flex;
+  align-items: center;
+}
+
+/* --- Main --- */
+
+main {
+  flex: 1;
+  padding: 1rem 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  overflow: auto;
+}
+
+.display {
+  border-radius: 20px;
+}
+
+main h2 {
+  padding: 1.5rem 0;
+}
+
+/* ---- Current ---- */
+
+.current .heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.temp-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.current .display {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem 3rem;
+}
+
+.current .weather-info {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  text-align: center;
+}
+
+.current .main-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.current .temperature {
+  display: flex;
+}
+
+.current .additional-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0rem;
+}
+
+.current .humidity,
+.current .clouds {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.current .location-info {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.7rem;
+}
+
+.current .location {
+  display: flex;
+  align-items: baseline;
+  justify-items: flex-end;
+  gap: 0.5rem;
+}
+
+.current .local-time {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* ---- Forecast ---- */
+
+.forecast .displays {
+  display: flex;
+  gap: 2rem;
+}
+
+.forecast .display {
+  padding: 1.5rem 2rem;
+  flex: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.forecast h4 {
+  margin-bottom: 1rem;
+}
+
+.forecast .main-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.forecast .temperature {
+  display: flex;
+}
+
+.forecast .info-text {
+  margin-bottom: 1.5rem;
+}
+
+.forecast .sun-info,
+.forecast .additional-info {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.forecast .sunrise,
+.forecast .sunset,
+.forecast .humidity,
+.forecast .rain {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+/* -- Style -- */
+
+/* --- Header --- */
+
+header {
+  background-color: var(--primary);
+}
+
+.brand-name {
+  font-size: 3rem;
+  font-family: var(--font-heading);
+  font-weight: bold;
+  letter-spacing: -2px;
+  color: var(--text);
+}
+
+.search-section {
+  background-color: var(--text);
+  border-radius: 50px;
+}
+
+.search-section:focus-within {
+  outline: 1px solid var(--secondary);
+}
+
+#city-search {
+  border: none;
+  background-color: var(--text);
+  color: var(--background);
+  font-size: 1.2rem;
+  font-family: var(--font-text);
+}
+
+#city-search {
+  outline: none;
+}
+
+.btn-city-search {
+  display: flex;
+  align-items: center;
+  border: none;
+  background-color: var(--text);
+}
+
+.btn-city-search > .material-symbols-rounded {
+  font-size: 1.5rem;
+  color: var(--background);
+}
+
+/* --- Main --- */
+
+main {
+  background-color: var(--background);
+  color: var(--text);
+  font-family: var(--font-text);
+}
+
+.display {
+  background-color: var(--secondary);
+}
+
+main h2 {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  letter-spacing: -1px;
+}
+
+/* ---- Current ---- */
+
+.temp-toggle .label {
+  font-size: 1.2rem;
+  color: var(--text);
+}
+
+.btn-temp-toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: none;
+  padding: 0.4em 0.6em;
+  color: var(--background);
+  background-color: #bcf425;
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: var(--font-text);
+}
+
+.current .temperature {
+  font-size: 2rem;
+}
+
+.current .info-text {
+  font-weight: bold;
+  font-size: 1.7rem;
+}
+
+.current .city {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+}
+
+.current .country {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+}
+
+/* ---- Forecast ---- */
+
+.forecast h2 {
+  border-top: 3px solid var(--accent);
+}
+
+.forecast h4 {
+  font-size: 1.7rem;
+  font-family: var(--font-heading);
+}
+
+.forecast .temperature {
+  font-size: 1.8rem;
+}
+
+.forecast .info-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.forecast .sunrise,
+.forecast .sunset,
+.forecast .humidity,
+.forecast .rain {
+  font-size: 0.8rem;
 }

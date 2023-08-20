@@ -5,9 +5,200 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Weather App</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
     <script src="./bundle.js" defer></script>
   </head>
   <body>
-    <input type="text" id="city-search" maxlength="30" />
-    <button class="btn-city-search">Search</button>
+    <header>
+      <div class="brand">
+        <h1 class="brand-name">My Weather App</h1>
+      </div>
+      <div class="search-section">
+        <input
+          type="text"
+          id="city-search"
+          maxlength="30"
+          placeholder="Enter city name..."
+        />
+        <button class="btn-city-search">
+          <span class="material-symbols-rounded">search</span>
+        </button>
+      </div>
+    </header>
+    <main>
+      <div class="current">
+        <div class="heading">
+          <h2>Current Weather</h2>
+          <div class="temp-toggle">
+            <p class="label">Temperature in:</p>
+            <button class="btn-temp-toggle">°C</button>
+          </div>
+        </div>
+        <div class="display">
+          <div class="weather-info">
+            <div class="main-info">
+              <img
+                src="//cdn.weatherapi.com/weather/64x64/night/116.png"
+                alt="Weather icon"
+              />
+              <div class="temperature">
+                <p class="value number">24</p>
+                <p class="value unit">°C</p>
+              </div>
+            </div>
+            <p class="value info-text">Partly cloudy</p>
+            <div class="additional-info">
+              <div class="humidity">
+                <span class="material-symbols-rounded">
+                  humidity_percentage
+                </span>
+                <p class="label">Humidity:</p>
+                <p class="value humidity-percentage">57 %</p>
+              </div>
+              <div class="clouds">
+                <span class="material-symbols-rounded"> cloud </span>
+                <p class="label">Clouds:</p>
+                <p class="value cloud-percentage">50 %</p>
+              </div>
+            </div>
+          </div>
+          <div class="location-info">
+            <div class="location">
+              <h3 class="value city">London</h3>
+              <h3 class="value country">United Kingdom</h3>
+            </div>
+            <p class="value date">Sunday 20th August 2023</p>
+            <div class="local-time">
+              <p class="label">Local time:</p>
+              <p class="value time">6:12 PM</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="forecast">
+        <div class="heading">
+          <h2>Forecast</h2>
+        </div>
+        <div class="displays">
+          <div class="display today">
+            <h4>Today</h4>
+            <div class="main-info">
+              <img
+                src="//cdn.weatherapi.com/weather/64x64/day/116.png"
+                alt="Weather icon"
+              />
+              <div class="temperature">
+                <p class="value number">20</p>
+                <p class="value unit">°C</p>
+              </div>
+            </div>
+            <p class="value info-text">Partly cloudy</p>
+            <div class="sun-info">
+              <div class="sunrise">
+                <span class="material-symbols-rounded">water_lux</span>
+                <p class="label">Sunrise:</p>
+                <p class="value sunrise">05:54 AM</p>
+              </div>
+              <div class="sunset">
+                <span class="material-symbols-rounded">wb_twilight</span>
+                <p class="label">Sunset:</p>
+                <p class="value sunset">08:13 PM</p>
+              </div>
+            </div>
+            <div class="additional-info">
+              <div class="humidity">
+                <span class="material-symbols-rounded">humidity_mid</span>
+                <p class="label">Humidity:</p>
+                <p class="value humidity-percentage">65 %</p>
+              </div>
+              <div class="rain">
+                <span class="material-symbols-rounded">rainy</span>
+                <p class="label">Rain chances:</p>
+                <p class="value cloud-percentage">0 %</p>
+              </div>
+            </div>
+          </div>
+          <div class="display tomorrow">
+            <h4>Tomorrow</h4>
+            <div class="main-info">
+              <img
+                src="//cdn.weatherapi.com/weather/64x64/day/113.png"
+                alt="Weather icon"
+              />
+              <div class="temperature">
+                <p class="value number">20</p>
+                <p class="value unit">°C</p>
+              </div>
+            </div>
+            <p class="value info-text">Sunny</p>
+            <div class="sun-info">
+              <div class="sunrise">
+                <span class="material-symbols-rounded">water_lux</span>
+                <p class="label">Sunrise:</p>
+                <p class="value sunrise">05:55 AM</p>
+              </div>
+              <div class="sunset">
+                <span class="material-symbols-rounded">wb_twilight</span>
+                <p class="label">Sunset:</p>
+                <p class="value sunset">08:11 PM</p>
+              </div>
+            </div>
+            <div class="additional-info">
+              <div class="humidity">
+                <span class="material-symbols-rounded">humidity_mid</span>
+                <p class="label">Humidity:</p>
+                <p class="value humidity-percentage">68 %</p>
+              </div>
+              <div class="rain">
+                <span class="material-symbols-rounded">rainy</span>
+                <p class="label">Rain chances:</p>
+                <p class="value cloud-percentage">0 %</p>
+              </div>
+            </div>
+          </div>
+          <div class="display overmorrow">
+            <h4>Overmorrow</h4>
+            <div class="main-info">
+              <img
+                src="//cdn.weatherapi.com/weather/64x64/day/113.png"
+                alt="Weather icon"
+              />
+              <div class="temperature">
+                <p class="value number">20</p>
+                <p class="value unit">°C</p>
+              </div>
+            </div>
+            <p class="value info-text">Sunny</p>
+            <div class="sun-info">
+              <div class="sunrise">
+                <span class="material-symbols-rounded">water_lux</span>
+                <p class="label">Sunrise:</p>
+                <p class="value sunrise">05:57 AM</p>
+              </div>
+              <div class="sunset">
+                <span class="material-symbols-rounded">wb_twilight</span>
+                <p class="label">Sunset:</p>
+                <p class="value sunset">08:09 PM</p>
+              </div>
+            </div>
+            <div class="additional-info">
+              <div class="humidity">
+                <span class="material-symbols-rounded">humidity_mid</span>
+                <p class="label">Humidity:</p>
+                <p class="value humidity-percentage">59 %</p>
+              </div>
+              <div class="rain">
+                <span class="material-symbols-rounded">rainy</span>
+                <p class="label">Rain chances:</p>
+                <p class="value cloud-percentage">0 %</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>
