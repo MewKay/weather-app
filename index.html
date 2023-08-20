@@ -14,7 +14,7 @@
   <body>
     <header>
       <div class="brand">
-        <p class="brand-name">My Weather App</p>
+        <h1 class="brand-name">My Weather App</h1>
       </div>
       <div class="search-section">
         <input
@@ -31,7 +31,7 @@
     <main>
       <div class="current">
         <div class="heading">
-          <p>Current Weather</p>
+          <h2>Current Weather</h2>
           <div class="temp-toggle">
             <p class="label">Temperature in:</p>
             <button class="btn-temp-toggle">°C</button>
@@ -76,107 +76,109 @@
       </div>
       <div class="forecast">
         <div class="heading">
-          <p>Forecast</p>
+          <h2>Forecast</h2>
         </div>
-        <div class="display today">
-          <h4>Today</h4>
-          <div class="main-info">
-            <img
-              src="//cdn.weatherapi.com/weather/64x64/day/116.png"
-              alt="Weather icon"
-            />
-            <div class="temperature">
-              <p class="value number">20</p>
-              <p class="value unit">°C</p>
+        <div class="displays">
+          <div class="display today">
+            <h4>Today</h4>
+            <div class="main-info">
+              <img
+                src="//cdn.weatherapi.com/weather/64x64/day/116.png"
+                alt="Weather icon"
+              />
+              <div class="temperature">
+                <p class="value number">20</p>
+                <p class="value unit">°C</p>
+              </div>
+            </div>
+            <p class="value info-text">Partly cloudy</p>
+            <div class="sun-info">
+              <div class="sunrise">
+                <p class="label">Sunrise:</p>
+                <p class="value sunrise">05:54 AM</p>
+              </div>
+              <div class="sunset">
+                <p class="label">Sunset:</p>
+                <p class="value sunset">08:13 PM</p>
+              </div>
+            </div>
+            <div class="additional-info">
+              <div class="humidity">
+                <p class="label">Humidity:</p>
+                <p class="value humidity-percentage">65 %</p>
+              </div>
+              <div class="rain">
+                <p class="label">Chance of raining:</p>
+                <p class="value cloud-percentage">0 %</p>
+              </div>
             </div>
           </div>
-          <p class="value info-text">Partly cloudy</p>
-          <div class="sun-info">
-            <div class="sunrise">
-              <p class="label">Sunrise:</p>
-              <p class="value sunrise">05:54 AM</p>
+          <div class="display tomorrow">
+            <h4>Tomorrow</h4>
+            <div class="main-info">
+              <img
+                src="//cdn.weatherapi.com/weather/64x64/day/113.png"
+                alt="Weather icon"
+              />
+              <div class="temperature">
+                <p class="value number">20</p>
+                <p class="value unit">°C</p>
+              </div>
             </div>
-            <div class="sunset">
-              <p class="label">Sunset:</p>
-              <p class="value sunset">08:13 PM</p>
+            <p class="value info-text">Sunny</p>
+            <div class="sun-info">
+              <div class="sunrise">
+                <p class="label">Sunrise:</p>
+                <p class="value sunrise">05:55 AM</p>
+              </div>
+              <div class="sunset">
+                <p class="label">Sunset:</p>
+                <p class="value sunset">08:11 PM</p>
+              </div>
             </div>
-          </div>
-          <div class="additional-info">
-            <div class="humidity">
-              <p class="label">Humidity:</p>
-              <p class="value humidity-percentage">65 %</p>
-            </div>
-            <div class="rain">
-              <p class="label">Chance of raining:</p>
-              <p class="value cloud-percentage">0 %</p>
-            </div>
-          </div>
-        </div>
-        <div class="display tomorrow">
-          <h4>Tomorrow</h4>
-          <div class="main-info">
-            <img
-              src="//cdn.weatherapi.com/weather/64x64/day/113.png"
-              alt="Weather icon"
-            />
-            <div class="temperature">
-              <p class="value number">20</p>
-              <p class="value unit">°C</p>
-            </div>
-          </div>
-          <p class="value info-text">Sunny</p>
-          <div class="sun-info">
-            <div class="sunrise">
-              <p class="label">Sunrise:</p>
-              <p class="value sunrise">05:55 AM</p>
-            </div>
-            <div class="sunset">
-              <p class="label">Sunset:</p>
-              <p class="value sunset">08:11 PM</p>
+            <div class="additional-info">
+              <div class="humidity">
+                <p class="label">Humidity:</p>
+                <p class="value humidity-percentage">68 %</p>
+              </div>
+              <div class="rain">
+                <p class="label">Chance of raining:</p>
+                <p class="value cloud-percentage">0 %</p>
+              </div>
             </div>
           </div>
-          <div class="additional-info">
-            <div class="humidity">
-              <p class="label">Humidity:</p>
-              <p class="value humidity-percentage">68 %</p>
+          <div class="display overmorrow">
+            <h4>Overmorrow</h4>
+            <div class="main-info">
+              <img
+                src="//cdn.weatherapi.com/weather/64x64/day/113.png"
+                alt="Weather icon"
+              />
+              <div class="temperature">
+                <p class="value number">20</p>
+                <p class="value unit">°C</p>
+              </div>
             </div>
-            <div class="rain">
-              <p class="label">Chance of raining:</p>
-              <p class="value cloud-percentage">0 %</p>
+            <p class="value info-text">Sunny</p>
+            <div class="sun-info">
+              <div class="sunrise">
+                <p class="label">Sunrise:</p>
+                <p class="value sunrise">05:57 AM</p>
+              </div>
+              <div class="sunset">
+                <p class="label">Sunset:</p>
+                <p class="value sunset">08:09 PM</p>
+              </div>
             </div>
-          </div>
-        </div>
-        <div class="display overmorrow">
-          <h4>Overmorrow</h4>
-          <div class="main-info">
-            <img
-              src="//cdn.weatherapi.com/weather/64x64/day/113.png"
-              alt="Weather icon"
-            />
-            <div class="temperature">
-              <p class="value number">20</p>
-              <p class="value unit">°C</p>
-            </div>
-          </div>
-          <p class="value info-text">Sunny</p>
-          <div class="sun-info">
-            <div class="sunrise">
-              <p class="label">Sunrise:</p>
-              <p class="value sunrise">05:57 AM</p>
-            </div>
-            <div class="sunset">
-              <p class="label">Sunset:</p>
-              <p class="value sunset">08:09 PM</p>
-            </div>
-          </div>
-          <div class="additional-info">
-            <div class="humidity">
-              <p class="label">Humidity:</p>
-              <p class="value humidity-percentage">59 %</p>
-            </div>
-            <div class="rain">
-              <p class="label">Chance of raining:</p>
-              <p class="value cloud-percentage">0 %</p>
+            <div class="additional-info">
+              <div class="humidity">
+                <p class="label">Humidity:</p>
+                <p class="value humidity-percentage">59 %</p>
+              </div>
+              <div class="rain">
+                <p class="label">Chance of raining:</p>
+                <p class="value cloud-percentage">0 %</p>
+              </div>
             </div>
           </div>
         </div>
