@@ -24,9 +24,62 @@
           placeholder="Enter city name..."
         />
         <button class="btn-city-search">
-          <i class="material-symbols-rounded">search</i>
+          <span class="material-symbols-rounded">search</span>
         </button>
       </div>
     </header>
+    <main>
+      <div class="current">
+        <div class="heading">
+          <p>Current Weather</p>
+          <div class="temp-toggle">
+            <p class="label">Temperature in:</p>
+            <button class="btn-temp-toggle">°C</button>
+          </div>
+        </div>
+        <div class="display">
+          <div class="weather-info">
+            <div class="main-info">
+              <img
+                src="//cdn.weatherapi.com/weather/64x64/night/116.png"
+                alt="Weather icon"
+              />
+              <div class="temperature">
+                <p class="value number">24</p>
+                <p class="value unit">°C</p>
+              </div>
+            </div>
+            <p class="value info-text">Partly cloudy</p>
+            <div class="additional-info">
+              <div class="humidity">
+                <p class="label">Humidity :</p>
+                <p class="value humidity-percentage">57 %</p>
+              </div>
+              <div class="clouds">
+                <p class="label">Clouds :</p>
+                <p class="value cloud-percentage">57 %</p>
+              </div>
+            </div>
+          </div>
+          <div class="location-info">
+            <div class="location">
+              <p class="value city">London</p>
+              <p class="value country">United Kingdom</p>
+            </div>
+            <p class="value date">Sunday 20th August 2023</p>
+            <div class="local-time">
+              <p class="label">Local time:</p>
+              <p class="value time">6:12 PM</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="forecast">
+        <div class="heading"></div>
+        <div class="display today"></div>
+        <div class="display tomorrow"></div>
+        <div class="display overmorrow"></div>
+      </div>
+    </main>
   </body>
 </html>
