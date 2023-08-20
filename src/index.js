@@ -6,6 +6,7 @@ import "./styles/style.css";
 
 const searchInput = document.querySelector("#city-search");
 const searchButton = document.querySelector(".btn-city-search");
+const toggleTemperatureButton = document.querySelector(".btn-temp-toggle");
 
 const displayWeatherInfo = async () => {
   if (searchInput.value === "") return;
@@ -17,4 +18,10 @@ const displayWeatherInfo = async () => {
   console.log(forecastDays);
 };
 
+const toggleTemperatureDisplay = (event) => {
+  const { target } = event;
+  target.innerText = target.innerText === "°C" ? "°F" : "°C";
+};
+
 searchButton.addEventListener("click", displayWeatherInfo);
+toggleTemperatureButton.addEventListener("click", toggleTemperatureDisplay);
