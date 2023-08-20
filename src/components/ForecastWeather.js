@@ -12,8 +12,8 @@ const ForecastDay = function createForecastOfOneDay(data) {
   const rainChance = day.daily_chance_of_rain;
 
   const { avghumidity } = day;
-  const avgTemperatureCelsius = day.avgtemp_c;
-  const avgTemperatureFahrenheit = day.avgtemp_f;
+  const avgTemperatureCelsius = `${day.avgtemp_c}°C`;
+  const avgTemperatureFahrenheit = `${day.avgtemp_f}°F`;
 
   return {
     sunrise,

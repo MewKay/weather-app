@@ -25,8 +25,8 @@ const CurrentWeather = function createCurrentWeatherObject(data) {
   const date = getFormattedDate(localDate);
   const time = getFormattedTime(localDate);
 
-  const temperatureCelsius = current.feelslike_c;
-  const temperatureFahrenheit = current.feelslike_f;
+  const temperatureCelsius = `${Math.round(current.feelslike_c)}°C`;
+  const temperatureFahrenheit = `${Math.round(current.feelslike_f)}°F`;
 
   const info = condition.text;
   const { icon } = condition;
