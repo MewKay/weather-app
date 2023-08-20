@@ -1,9 +1,5 @@
-// eslint-disable-next-line import/no-extraneous-dependencies
-import { format } from "date-fns";
-
-const epochToDate = function convertUnixTimeStampToDateObject(timeEpoch) {
-  return new Date(timeEpoch * 1000);
-};
+import { format, fromUnixTime } from "date-fns";
+import { utcToZonedTime } from "date-fns-tz";
 
 const getFormattedDate = function formatDateToConvenientPattern(date) {
   return format(date, "EEEE do MMMM yyyy");
@@ -21,9 +17,10 @@ const CurrentWeather = function createCurrentWeatherObject(data) {
 
   const { name: cityName, country: countryName } = location;
 
-  const localDate = epochToDate(location.localtime_epoch);
-  const date = getFormattedDate(localDate);
-  const time = getFormattedTime(localDate);
+  const localDate = fromUnixTime(location.localtime_epoch);
+  const zonedDate = utcToZonedTime(localDate, location.tz_id);
+  const date = getFormattedDate(zonedDate);
+  const time = getFormattedTime(zonedDate);
 
   const temperatureCelsius = `${Math.round(current.feelslike_c)}°C`;
   const temperatureFahrenheit = `${Math.round(current.feelslike_f)}°F`;

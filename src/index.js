@@ -1,6 +1,8 @@
 import CurrentWeather from "./components/CurrentWeather";
+import displayCurrent from "./components/displayCurrent";
 import ForecastDays from "./components/ForecastDays";
 import getForecastWeather from "./components/getForecastWeather";
+import TemperatureUnits from "./components/tempUnits";
 import "./styles/reset.css";
 import "./styles/style.css";
 
@@ -14,13 +16,16 @@ const displayWeatherInfo = async () => {
   const weatherData = await getForecastWeather(cityName);
   const currentWeather = CurrentWeather(weatherData);
   const forecastDays = ForecastDays(weatherData);
-  console.log(currentWeather);
-  console.log(forecastDays);
+  displayCurrent(currentWeather);
+  console.log(weatherData);
 };
 
 const toggleTemperatureDisplay = (event) => {
   const { target } = event;
-  target.innerText = target.innerText === "°C" ? "°F" : "°C";
+  target.innerText =
+    target.innerText === TemperatureUnits.CELSIUS
+      ? TemperatureUnits.FAHRENHEIT
+      : TemperatureUnits.CELSIUS;
 };
 
 searchButton.addEventListener("click", displayWeatherInfo);
