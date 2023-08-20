@@ -39,6 +39,51 @@ header {
   align-items: center;
 }
 
+/* --- Main --- */
+
+main {
+  padding: 1rem 10rem;
+}
+
+.display {
+  border-radius: 20px;
+}
+
+/* ---- Current ---- */
+
+.current .heading {
+  display: flex;
+  justify-content: space-between;
+}
+
+.temp-toggle {
+  display: flex;
+}
+
+.current .display {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* ---- Forecast ---- */
+
+.forecast .displays {
+  display: flex;
+  gap: 2rem;
+}
+
+.today {
+  flex: auto;
+}
+
+.tomorrow {
+  flex: auto;
+}
+
+.overmorrow {
+  flex: auto;
+}
+
 /* -- Style -- */
 
 /* --- Header --- */
@@ -90,4 +135,10 @@ header {
 .btn-city-search > .material-symbols-rounded {
   font-size: 1.5rem;
   color: var(--background);
+}
+
+/* --- Main --- */
+
+.display {
+  background-color: var(--secondary);
 }
