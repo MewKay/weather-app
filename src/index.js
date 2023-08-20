@@ -14,7 +14,7 @@ const displayWeatherInfo = async () => {
   const currentWeather = CurrentWeather(weatherData);
   const forecastDays = ForecastDays(weatherData);
   console.log(currentWeather);
-  console.log(weatherData);
+  console.log(forecastDays);
 };
 
 searchButton.addEventListener("click", displayWeatherInfo);
