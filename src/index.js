@@ -1,24 +1,17 @@
-import CurrentWeather from "./components/CurrentWeather";
-import displayCurrent from "./components/displayCurrent";
-import displayForecast from "./components/displayForecast";
-import ForecastDays from "./components/ForecastDays";
-import getForecastWeather from "./components/getForecastWeather";
 import TemperatureUnits from "./components/tempUnits";
+import weatherData from "./components/weatherData";
 import "./styles/reset.css";
 import "./styles/style.css";
 
-const searchInput = document.querySelector("#city-search");
 const searchButton = document.querySelector(".btn-city-search");
 const toggleTemperatureButton = document.querySelector(".btn-temp-toggle");
 
 const displayWeatherInfo = async () => {
+  const searchInput = document.querySelector("#city-search");
   if (searchInput.value === "") return;
   const cityName = searchInput.value;
-  const weatherData = await getForecastWeather(cityName);
-  const currentWeather = CurrentWeather(weatherData);
-  const forecastDays = ForecastDays(weatherData);
-  displayCurrent(currentWeather);
-  displayForecast(forecastDays);
+  weatherData.queryCity(cityName);
+  weatherData.displayData();
 };
 
 const toggleTemperatureDisplay = (event) => {
@@ -27,6 +20,7 @@ const toggleTemperatureDisplay = (event) => {
     target.innerText === TemperatureUnits.CELSIUS
       ? TemperatureUnits.FAHRENHEIT
       : TemperatureUnits.CELSIUS;
+  weatherData.displayData();
 };
 
 searchButton.addEventListener("click", displayWeatherInfo);
