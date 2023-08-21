@@ -3,6 +3,12 @@ import weatherData from "./components/weatherData";
 import "./styles/reset.css";
 import "./styles/style.css";
 
+document.addEventListener("DOMContentLoaded", async () => {
+  const DEFAULT_CITY_TO_DISPLAY = "London";
+  await weatherData.queryCity(DEFAULT_CITY_TO_DISPLAY);
+  weatherData.displayData();
+});
+
 const searchButton = document.querySelector(".btn-city-search");
 const toggleTemperatureButton = document.querySelector(".btn-temp-toggle");
 
