@@ -16,7 +16,7 @@ const displayWeatherInfo = async () => {
   const searchInput = document.querySelector("#city-search");
   if (searchInput.value === "") return;
   const cityName = searchInput.value;
-  weatherData.queryCity(cityName);
+  await weatherData.queryCity(cityName);
   weatherData.displayData();
 };
 
@@ -31,3 +31,8 @@ const toggleTemperatureDisplay = (event) => {
 
 searchButton.addEventListener("click", displayWeatherInfo);
 toggleTemperatureButton.addEventListener("click", toggleTemperatureDisplay);
+window.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    displayWeatherInfo();
+  }
+});
