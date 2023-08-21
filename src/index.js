@@ -1,5 +1,6 @@
 import CurrentWeather from "./components/CurrentWeather";
 import displayCurrent from "./components/displayCurrent";
+import displayForecast from "./components/displayForecast";
 import ForecastDays from "./components/ForecastDays";
 import getForecastWeather from "./components/getForecastWeather";
 import TemperatureUnits from "./components/tempUnits";
@@ -17,7 +18,7 @@ const displayWeatherInfo = async () => {
   const currentWeather = CurrentWeather(weatherData);
   const forecastDays = ForecastDays(weatherData);
   displayCurrent(currentWeather);
-  console.log(weatherData);
+  displayForecast(forecastDays);
 };
 
 const toggleTemperatureDisplay = (event) => {

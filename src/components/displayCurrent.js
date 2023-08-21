@@ -12,7 +12,7 @@ const country = document.querySelector(".current .value.country");
 const date = document.querySelector(".current .value.date");
 const time = document.querySelector(".current .value.time");
 
-const displayCurrent = function takeCurrenWeatherDataToDisplayToUI(
+const displayCurrent = function takeCurrentWeatherDataToDisplayToUI(
   CurrentWeather
 ) {
   weatherIcon.src = CurrentWeather.icon;
