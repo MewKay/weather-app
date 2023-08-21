@@ -7,7 +7,8 @@ const getForecastWeather = async function getForecastWeatherFromAPIWithCityName(
 
   const response = await fetch(API_REQUEST_URL, { mode: "cors" });
   if (response.status !== 200) {
-    throw new Error("Data for  Unavailable");
+    alert(`Data for ${cityName} unavailable`);
+    return null;
   }
 
   return response.json();
